@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello Django</title>
+    <title>Форма Django</title>
 </head>
 <body>
-    <h1>Django Main Page</h1>
-    <h2>templates/index.html</h2>
+    <form method="post">
+        {% csrf_token %}
+    <table>
+        {{ form }}
+    </table>
+        <input type="submit" value="Отправить" >
+    </form>
 </body>
 </html>

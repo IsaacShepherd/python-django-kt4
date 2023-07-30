@@ -1,10 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, HttpResponsePermanentRedirect
 
+from .forms import UserForm, ContactForm
+
 
 # Create your views here.
 def index(request):
-    return render(request, "firstapp/index.html")
+    userform = UserForm()
+    return render(request, "index.html",
+                  {"form": userform})
 
 
 def about(request):
